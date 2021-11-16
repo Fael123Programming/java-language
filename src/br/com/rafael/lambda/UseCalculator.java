@@ -1,11 +1,10 @@
 package br.com.rafael.lambda;
 
-import java_language.anonymous_class.ex2.Calculator;
-import java_language.anonymous_class.ex2.Operation;
+import br.com.rafael.anonymous_class.ex2.Calculator;
+import br.com.rafael.anonymous_class.ex2.Operation;
 
 import javax.swing.*;
 import java.math.BigDecimal;
-import java.math.MathContext;
 
 public class UseCalculator {
     public static void main(String[] args) {
@@ -41,7 +40,7 @@ public class UseCalculator {
                                 """);
                         number2 = new BigDecimal(n2);
                         calculator.setOperation(switch(option) {
-                            case "1" -> (Operation) BigDecimal::add;
+                            case "1" -> (Operation) BigDecimal::add; //Method reference!
                             case "2" -> (Operation) BigDecimal::subtract;
                             case "3" -> (Operation) BigDecimal::multiply;
                             case "4" -> (Operation) BigDecimal::divide;

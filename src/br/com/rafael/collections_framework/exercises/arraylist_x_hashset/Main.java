@@ -1,6 +1,6 @@
 package br.com.rafael.collections_framework.exercises.arraylist_x_hashset;
 
-import _recursion.Time;
+import br.com.rafael.time.Time;
 
 import java.util.*;
 

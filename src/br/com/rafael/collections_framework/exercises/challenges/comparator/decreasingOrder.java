@@ -8,7 +8,7 @@ public class decreasingOrder implements Comparator<Integer> { //A comparator of 
 
     @Override
     public int compare(Integer n1,Integer n2) {
-        return Integer.compare(n1,n2) * -1; //Compare numbers to order them decreasingly.
+        return Integer.compare(n1,n2) * -1; //It Compares numbers to order them decreasingly.
     }
     //It seems that this method above can be used instead of compareTo.
 }

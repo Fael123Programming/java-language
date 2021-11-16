@@ -1,6 +1,6 @@
 package br.com.rafael.parallel_programming.ex03;
 
-import java_language.parallel_programming.ex02.TestEx02.Program;
+import br.com.rafael.parallel_programming.ex02.TestEx02.Program;
 //Importing an inner class is similar to importing a traditional one.
 
 public class TestEx03 {

@@ -1,6 +1,6 @@
 package br.com.rafael.enumeration_2;
 
-import java_language.enumeration_2._enum.*;
+import br.com.rafael.enumeration_2._enum.*;
 
 public class Tester {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package br.com.rafael.collections_framework.exercises.arraylist_x_linkedlist;
 
-import _recursion.Time;
+import br.com.rafael.time.Time;
 import java.util.*;
 
 //LinkedLists are fast when inserting elements in the first position.

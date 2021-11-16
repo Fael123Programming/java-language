@@ -1,6 +1,6 @@
 package br.com.rafael.enumeration.classes;
 
-import java_language.enumeration.enum_.Type;
+import br.com.rafael.enumeration.enum_.Type;
 
 public class Customer {
     private final String name;

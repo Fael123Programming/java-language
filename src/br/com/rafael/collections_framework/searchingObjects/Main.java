@@ -2,8 +2,7 @@ package br.com.rafael.collections_framework.searchingObjects;
 
 //Using the method binarySearch of class Collections!
 import java.util.*;
-
-import java_language.collections_framework.ordenation.Car;
+import br.com.rafael.collections_framework.ordenation.Car;
 
 public class Main {
     public static void main(String[] args) {

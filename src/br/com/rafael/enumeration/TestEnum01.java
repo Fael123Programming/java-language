@@ -1,7 +1,7 @@
 package br.com.rafael.enumeration;
 
-import java_language.enumeration.classes.Customer;
-import java_language.enumeration.enum_.Type;
+import br.com.rafael.enumeration.classes.Customer;
+import br.com.rafael.enumeration.enum_.Type;
 
 public class TestEnum01 {
     public static void main(String[] args) {

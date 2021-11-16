@@ -1,9 +1,6 @@
 package br.com.rafael.collections_framework._maps;
 
-import java_language.example_constructing_houses.structural.House;
-
 import java.util.*;
-
 //Maps are the best choice to use for making searches for objects depending on an information of them.
 
 public class Main {
@@ -13,8 +10,8 @@ public class Main {
         //String is the type of the keys.
         //House is the type of the values the keys point to.
         //Two methods are principal: put(key,value) and get(key).
-        houses.put("mine",new House("White",10));
-        houses.put("neighbour",new House("Pink",12));
+        houses.put("mine",new House("White", 10));
+        houses.put("neighbour",new House("Pink", 12));
         House hs = houses.get("mine");
         System.out.println(hs.info());
         System.out.println(houses.containsKey("mine"));
