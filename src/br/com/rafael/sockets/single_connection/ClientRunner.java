@@ -1,12 +1,14 @@
-package br.com.rafael.sockets;
+package br.com.rafael.sockets.single_connection;
 
-import br.com.rafael.sockets.client.Client;
-import br.com.rafael.sockets.serversocket.Server;
+import java.io.*;
+import java.net.Socket;
+import java.util.Scanner;
 
 //import java.net.*;
 //java.net is the basic API to use when making talkative applications in Java (client -> server).
+//To find out what is your IP address: on command prompt, type "ipconfig".
 
-public class Main {
+public class ClientRunner {
     public static void main(String[] args) {
         //A socket is a bidirectional mechanism used to connect two points in
         //a data communication.
@@ -29,11 +31,34 @@ public class Main {
         //gate is used to only "receive the guests". After being accepted, the client
         //is moved to another gate. It allows multiple connections meanwhile!!!
         //In Java, this mechanism is done by threads (multiple execution lines).
-        Server server = new Server(10);
-        Client client = new Client(server.getPortToOpen(), server.getIPAddress());
-        Thread serverTrigger = new Thread(server);
-        Thread clientTrigger = new Thread(client);
-        serverTrigger.start();
-        clientTrigger.start();
+        (new Thread(new Client(10, "0.0.0.0"))).start();
+    }
+
+    private static class Client implements Runnable {
+        private final int portToConnect;
+        private final String serverIPAddress;
+
+        public Client(int portToConnect, String serverIPAddress) {
+            this.portToConnect = portToConnect;
+            this.serverIPAddress = serverIPAddress;
+        }
+
+        @Override
+        public void run() {
+            try {
+                Socket clientSocket = new Socket(serverIPAddress, portToConnect);
+                System.out.println("Client has been connected to server " + serverIPAddress + " on port " + portToConnect);
+                PrintStream printer = new PrintStream(clientSocket.getOutputStream());
+                Scanner input = new Scanner(System.in);
+                while (input.hasNextLine()) {
+                    printer.println(input.nextLine());
+                }
+                input.close();
+                printer.close();
+                clientSocket.close();
+            } catch (IOException ioe) {
+                System.out.println("An error occurred in method run() of class Client");
+            }
+        }
     }
 }

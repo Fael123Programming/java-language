@@ -6,24 +6,14 @@ import java.time.LocalDate;
 //An abstract class is a class used only for inheritance purposes: it grabs some important data
 //inside itself and cannot be instantiated but only construct reference variables for its children.
 
-public abstract class Employee { //No objects of this class for you!!!
-    private String name, area;
-    private LocalDate dateOfBirth;
+public abstract class Employee extends Person { //No objects of this class for you!!!
+    private String area;
     protected BigDecimal baseSalary;
 
-    public Employee(String name, String area, LocalDate dateOfBirth, BigDecimal baseSalary){
-        this.name = name;
+    public Employee(String name, LocalDate dateOfBirth, String area, BigDecimal baseSalary) {
+        super(name, dateOfBirth);
         this.area = area;
-        this.dateOfBirth = dateOfBirth;
         this.baseSalary = baseSalary;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getArea() {
@@ -34,20 +24,17 @@ public abstract class Employee { //No objects of this class for you!!!
         this.area = area;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public BigDecimal getBaseSalary() {
         return baseSalary;
     }
 
     public void setBaseSalary(BigDecimal baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+    @Override
+    public void getStandardized(){
+        System.out.println("Only a test method...");
     }
 
     public abstract BigDecimal getSalary(BigDecimal bg1, BigDecimal bg2);
@@ -58,9 +45,9 @@ public abstract class Employee { //No objects of this class for you!!!
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
+                "name='" + super.name + '\'' +
                 ", area='" + area + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
+                ", dateOfBirth=" + super.dateOfBirth +
                 ", baseSalary=" + baseSalary +
                 '}';
     }
