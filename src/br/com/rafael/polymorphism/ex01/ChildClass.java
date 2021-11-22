@@ -1,4 +1,4 @@
-package br.com.rafael.polymorphism;
+package br.com.rafael.polymorphism.ex01;
 
 public class ChildClass extends SuperClass {
     public void doNothing(){

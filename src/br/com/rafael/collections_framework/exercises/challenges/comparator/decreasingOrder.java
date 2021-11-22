@@ -5,7 +5,6 @@ import java.util.Comparator;
 //it already has a natural ordering (for example, based on an implementation of the interface Comparable).
 
 public class decreasingOrder implements Comparator<Integer> { //A comparator of Integers!
-
     @Override
     public int compare(Integer n1,Integer n2) {
         return Integer.compare(n1,n2) * -1; //It Compares numbers to order them decreasingly.

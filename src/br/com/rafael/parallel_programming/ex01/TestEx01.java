@@ -13,6 +13,12 @@ public class TestEx01 {
 //    You can also extend from the class Thread (which by itself implements Runnable) and implement the
 //    method run() there, but this practice is not advisable because you're inheriting lots of others methods
 //    as well.
+//    The access of multiple threads to one object can be hazardous.
+//    The scheduler can be tricky and prejudice your system of giving the right results of processing.
+//    When this fact is real for you, we say that that class is not thread-safe.
+//    To avoid irregularities of this type, we can lock a critic piece of code letting it be accessed
+//    only by one thread a time: the reserved word synchronized makes a code on an object critic and
+//    inaccessible to other threads when one is on it.
     public static void main(String[] args) {
         Thread chargeBar = new Thread(new ChargeBar(100, 50));
         chargeBar.start();
