@@ -10,5 +10,21 @@ public class Main {
         System.out.println(sin(toRadians(90)));
         System.out.println(sin(toRadians(45)));
         System.out.println(sin(toRadians(30)));
+        System.out.println(factInt(16));
+        System.out.println(factLong(20));
+    }
+
+    private static int factInt(int number) {
+        int result = 1;
+        for (int i = 1; i <= number; i++)
+            result *= i;
+        return result;
+    }
+
+    private static long factLong(int number) {
+        long result = 1;
+        for (int i = 1; i <= number; i++)
+            result *= i;
+        return result;
     }
 }
