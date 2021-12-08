@@ -2,7 +2,8 @@ package br.com.rafael.arrays;
 
 public class Test {
 
-    public Test(){}
+    public Test() {
+    }
     //The constructor function does not have anything that specifies a return type.
     //Even void is not permissible.
 
@@ -10,7 +11,7 @@ public class Test {
         System.out.println(msg);
     }
 
-    protected String print(String msg,int num) {
+    protected String print(String msg, int num) {
         //Method overloading: you can change the access modifier and the return value. You must change the parameters!
         //Method name cannot be changed.
         String printable = msg + num;
