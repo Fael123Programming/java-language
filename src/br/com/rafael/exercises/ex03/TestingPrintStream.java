@@ -1,4 +1,4 @@
-package br.com.rafael.exercises.ex3;
+package br.com.rafael.exercises.ex03;
 
 import java.io.IOException;
 import java.io.PrintStream;
