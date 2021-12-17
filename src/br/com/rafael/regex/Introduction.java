@@ -2,7 +2,7 @@ package br.com.rafael.regex;
 
 import java.util.regex.*;
 
-public class TestRegEx {
+public class Introduction {
     public static void main(String[] args) {
 //        An internal language of programming languages based on patterns.
 //        Two classes were prepared to handle them: Pattern and Matcher.
@@ -24,7 +24,7 @@ public class TestRegEx {
     private static void search(String wantedExpression, String baseText) {
         Pattern pat = Pattern.compile(wantedExpression);
         Matcher mat = pat.matcher(baseText);
-        System.out.println("Text:\n" + baseText);
+        System.out.println("Text: " + baseText);
         System.out.println("Expression: " + mat.pattern());
         System.out.print("Indices:\t");
         while (mat.find())

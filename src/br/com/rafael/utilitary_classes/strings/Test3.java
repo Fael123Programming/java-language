@@ -9,6 +9,6 @@ public class Test3 {
         builder.append("Just a simple phrase");
         System.out.println(builder.delete(0, 6)); //Non-inclusive. It will delete (end - 1) characters from position start.
         System.out.println(builder.insert(0, "This is ")); //Insert at position 0 the following string.
-
+        System.out.println(String.valueOf(Math.PI).charAt(1));
     }
 }
