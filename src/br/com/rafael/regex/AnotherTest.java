@@ -12,7 +12,7 @@ public class AnotherTest {
 //            String regex = "\\d{3}[.-]\\d{3}[.-]7822";
             Pattern pat = Pattern.compile(regex);
             Matcher mat;
-            while (scan.hasNextLine()) {
+            while (scan.hasNextLine()) { //Reading that file!
                 mat = pat.matcher(scan.nextLine());
                 while (mat.find())
                     System.out.println(mat.group());

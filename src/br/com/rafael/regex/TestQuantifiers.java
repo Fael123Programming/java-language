@@ -22,11 +22,11 @@ public class TestQuantifiers {
 //      maca(rr|c)ão would be "macarrão" or "macacão".
 //      A dot inside a regex is used to say that "whatever symbol can be here".
 //      To strictly say that you really want a textual dot use "\\." instead.
-//      Inside a [] you do not need to put double slashes (\\);
-//      Search is when you want to find a pattern inside a string.
+//      Inside a [] you do not need to put double backward slashes (\\);
+//      -> Search is when you want to find a pattern inside a string.
 //      To do that use Pattern and Matcher classes (Pattern.compile(regex),
 //      patternObj.matcher(text), matcherObj.find(), matcherObj.start(), matcherObj.group()).
-//      Validate is when you want to check a string is strictly fitted in a specific regex.
+//      -> Validate is when you want to check a string is strictly fitted in a specific regex.
 //      To do that use Pattern.matches(regex, text) or the method matches() every string has.
 //      See validator.Validator to see our tests!
         String txt = "cat mat pat bat";
@@ -34,19 +34,22 @@ public class TestQuantifiers {
         Matcher mat = pat.matcher(txt);
         while (mat.find())
             System.out.println(mat.start() + " " + mat.group());
-        String mrs = "Mr. Robinson, ms jabran, Mrs. Black Panther, Mr John Wayne, Mr. T Andrews, Ms. Marianna, Me Marian, MR.S Jake"; //We want only Mrs.
+        System.out.println("------------------------------");
+        String mrs = "Mr. Robinson, ms jabran, Mrs. Black Panther, Mr John Wayne, Mr. T Andrews, Ms. Marianna, " +
+                "Me Marian, MR.S Jake";
         mat = (Pattern.compile("Mr\\.?\\s[A-Z]\\w*")).matcher(mrs);
         while (mat.find())
             System.out.println(mat.start() + " " + mat.group());
+        System.out.println("------------------------------");
         mat = (Pattern.compile("M(r|s|rs)\\.?(\\s[A-Z]\\w*)+")).matcher(mrs);
         while (mat.find())
             System.out.println(mat.start() + " " + mat.group());
+        System.out.println("-------------------------------");
         String emails = "CoreyMSchafer@gmail.com corey.schafer@university.edu corey-321-schafer@my-work.net";
         String regex = "[\\w.-]+@[\\w-]+(\\.[a-z]+)+";
         pat = Pattern.compile(regex);
         mat = pat.matcher(emails);
         while (mat.find())
             System.out.println(mat.group());
-
     }
 }

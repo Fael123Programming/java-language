@@ -1,4 +1,4 @@
-package br.com.rafael.weird_expression;
+package br.com.rafael.weird_expressions;
 
 public class Test {
     public static void main(String[] args) {

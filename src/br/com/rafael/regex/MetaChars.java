@@ -17,7 +17,7 @@ public class MetaChars {
         Matcher mat = pat.matcher(phrase);
         System.out.println("-----------------------------------------");
         while (mat.find())
-            System.out.print(mat.start() + " ");
+            System.out.print(mat.start() + " " + mat.group());
         System.out.println();
         System.out.println(Character.isDigit(phrase.charAt(55)));
         System.out.println("-----------------------------------------");
@@ -25,7 +25,7 @@ public class MetaChars {
         pat = Pattern.compile(meta);
         mat = pat.matcher(phrase);
         while (mat.find())
-            System.out.print(mat.start() + " ");
+            System.out.print(mat.start() + " " + mat.group());
         System.out.println();
         System.out.println("-----------------------------------------");
         meta = "\\s";

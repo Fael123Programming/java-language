@@ -9,7 +9,7 @@ public class Main {
         System.out.println(Arrays.toString(names.split(", "))); //Easiest way to use a token with a String.
         System.out.println(Arrays.toString(anotherNames.split("\\d+")));
         Scanner scan = new Scanner(names);
-//        By default, Scanner uses " " as standard token (or delimiter).
+//      By default, Scanner uses " " as standard token (or delimiter).
         while (scan.hasNext())
             System.out.println(scan.next());
         scan.close();

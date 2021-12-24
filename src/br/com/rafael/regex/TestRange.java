@@ -14,6 +14,5 @@ public class TestRange {
         Matcher mat = pat.matcher(text);
         while (mat.find())
             System.out.println(mat.start() + " " + mat.group());
-        System.out.println();
     }
 }

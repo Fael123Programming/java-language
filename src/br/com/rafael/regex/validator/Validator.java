@@ -7,6 +7,7 @@ public class Validator {
 //        The method matches() from class String and class Pattern checks whether a string
 //        is right regarding a regular expression.
         return email.matches("[\\w.-]+@[\\w-]+(\\.[a-z]+)+");
+//      return Pattern.matches(regex, email);
     }
 
     public static boolean isAValidJavaHexadecimalNumber(String hexNumber) {
