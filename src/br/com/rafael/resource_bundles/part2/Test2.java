@@ -10,7 +10,7 @@ package br.com.rafael.resource_bundles.part2;
 //-> Traditional French child: exceptionMessages_fr_FR.properties
 //-> American English child exceptionMessages_en_US.properties
 //When called to afford a family-specific resource bundle, ResourceBundle.getBundle()
-// will recursively run through the whole family looking for this exact bundle.
+//will recursively run through the whole family looking up for this exact bundle.
 //If not found, it will try to supply the system's standard bundle then.
 //We can override keys from family base resource bundles in children of it.
 
