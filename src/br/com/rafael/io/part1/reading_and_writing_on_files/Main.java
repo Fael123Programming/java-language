@@ -1,6 +1,6 @@
-package br.com.rafael.java_io.reading_and_writing_on_files;
+package br.com.rafael.io.part1.reading_and_writing_on_files;
 
-import br.com.rafael.java_io.handy_for_projects.FileHandler;
+import br.com.rafael.io.part1.handy_for_projects.FileHandler;
 
 public class Main {
     public static void main(String[] args){

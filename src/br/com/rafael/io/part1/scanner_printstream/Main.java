@@ -1,4 +1,4 @@
-package br.com.rafael.java_io.scanner_printstream;
+package br.com.rafael.io.part1.scanner_printstream;
 
 import java.util.*;
 import java.io.*;

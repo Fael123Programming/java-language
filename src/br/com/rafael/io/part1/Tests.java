@@ -1,4 +1,4 @@
-package br.com.rafael.java_io;
+package br.com.rafael.io.part1;
 
 import java.io.*;
 

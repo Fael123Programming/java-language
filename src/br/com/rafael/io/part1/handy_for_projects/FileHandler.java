@@ -1,4 +1,4 @@
-package br.com.rafael.java_io.handy_for_projects;
+package br.com.rafael.io.part1.handy_for_projects;
 
 import java.io.*;
 import java.util.*;
@@ -63,10 +63,6 @@ public class FileHandler {
     }
 
     public static boolean fileExists(String path) {
-        try(Scanner fileScan = new Scanner(new File(path))) {
-            return true;
-        }catch(FileNotFoundException e) {
-            return false;
-        }
+        return new File(path).exists();
     }
 }
