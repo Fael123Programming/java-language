@@ -8,6 +8,8 @@ public class TestNumberFormat {
     public static void main(String[] args) {
         Locale frLocale = new Locale("fr", "FR");
         Locale brLocale = new Locale("pt", "BR");
+        System.out.println(NumberFormat.getCurrencyInstance(frLocale).format(2));
+        System.exit(0);
         System.out.println(frLocale.getDisplayCountry() + "\t" + frLocale.getDisplayLanguage());
         System.out.println(brLocale.getDisplayCountry() + "\t" + brLocale.getDisplayLanguage());
         float decimalNumber = 1123123123.2343f;

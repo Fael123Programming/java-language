@@ -1,12 +1,6 @@
-package br.com.rafael.arrays;
+package br.com.rafael.method_overloading;
 
-public class Test {
-
-    public Test() {
-    }
-    //The constructor function does not have anything that specifies a return type.
-    //Even void is not permissible.
-
+public class Main {
     public void print(String msg) {
         System.out.println(msg);
     }

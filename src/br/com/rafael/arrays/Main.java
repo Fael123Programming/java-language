@@ -51,11 +51,6 @@ public class Main {
         //Integers: 0;
         //Floating point numbers: 0.0
         //Boolean variables: false;
-        String name;
-        //cmd.println(name); //Failed!
-        Test tt = new Test();
-        tt.print("A simple print!");
-        String msg = tt.print("A more complex message ",7);
-        System.out.println(msg);
+
     }
 }
