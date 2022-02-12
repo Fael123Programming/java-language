@@ -1,0 +1,2 @@
+New data record into this file
+Java has lots of good classes to use with I/O streams
