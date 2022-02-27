@@ -1,9 +1,9 @@
 package br.com.rafael.exercises.ex19;
 
-public class Number {
+public class IntegerType {
     private int number;
 
-    public Number(int number) {
+    public IntegerType(int number) {
         this.number = number;
     }
 

@@ -5,7 +5,9 @@ import java.awt.*;
 
 public class MyFrame extends JFrame {
     public MyFrame() {
-        JLabel label1 = new JLabel("This is a label", new ImageIcon("/home/leafar/Pictures/git_logo.png"), JLabel.CENTER);
+        JLabel label1 = new JLabel("This is a label", new ImageIcon("" +
+                "/home/leafar/documents/prg/code/java/java-language/src/br/com/rafael/graphical_interfaces/ex02/" +
+                "git_logo.png"), JLabel.CENTER);
         this.setTitle("My frame made in Java");
         this.setSize(900, 500);
         this.setLocation(300, 150);
@@ -15,11 +17,11 @@ public class MyFrame extends JFrame {
         this.setUndecorated(true);
         this.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
     }
 
     public void display() {
-        if (this.isVisible())
-            return;
-        this.setVisible(true);
+        if (!this.isVisible())
+            this.setVisible(true);
     }
 }

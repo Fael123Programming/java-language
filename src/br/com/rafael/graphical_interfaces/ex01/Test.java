@@ -1,7 +1,6 @@
 package br.com.rafael.graphical_interfaces.ex01;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 public class Test {
