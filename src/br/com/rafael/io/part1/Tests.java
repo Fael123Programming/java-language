@@ -2,6 +2,10 @@ package br.com.rafael.io.part1;
 
 import java.io.*;
 
+//File
+//FileWriter, BufferedWriter
+//FileReader, BufferedReader
+
 public class Tests {
     public static void main(String[] args) throws IOException {
         PrintStream screen = System.out;
