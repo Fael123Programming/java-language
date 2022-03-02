@@ -6,7 +6,7 @@ import java.awt.*;
 public class MyFrame extends JFrame {
     public MyFrame() {
         JLabel label1 = new JLabel("This is a label", new ImageIcon("" +
-                "/home/leafar/documents/prg/code/java/java-language/src/br/com/rafael/graphical_interfaces/ex02/" +
+                "/home/leafar/documents/prg/code/java/java-language/src/br/com/rafael/graphical_interfaces/createfile/" +
                 "git_logo.png"), JLabel.CENTER);
         this.setTitle("My frame made in Java");
         this.setSize(900, 500);

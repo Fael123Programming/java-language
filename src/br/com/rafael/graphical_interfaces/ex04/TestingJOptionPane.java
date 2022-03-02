@@ -5,7 +5,7 @@ import javax.swing.*;
 public class TestingJOptionPane {
     public static void main(String[] args) {
     //Show a normal message
-        ImageIcon ic = new ImageIcon("/home/leafar/documents/prg/code/java/java-language/src/br/com/rafael/graphical_interfaces/ex02/git_logo.png");
+        ImageIcon ic = new ImageIcon("/home/leafar/documents/prg/code/java/java-language/src/br/com/rafael/graphical_interfaces/createfile/git_logo.png");
         JOptionPane.showMessageDialog(null, "Hello Java!", "Greetings", JOptionPane.INFORMATION_MESSAGE, ic);
     //Confirm message: besides it shows a message, it returns an integer value according to which option user has chosen.
     //Yes=0, no=1, cancel=2.

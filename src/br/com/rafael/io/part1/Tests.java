@@ -2,9 +2,8 @@ package br.com.rafael.io.part1;
 
 import java.io.*;
 
-//File
-//FileWriter, BufferedWriter
-//FileReader, BufferedReader
+//The most basic classes in java.io are the following:
+// File, FileWriter, BufferedWriter, FileReader, BufferedReader
 
 public class Tests {
     public static void main(String[] args) throws IOException {
