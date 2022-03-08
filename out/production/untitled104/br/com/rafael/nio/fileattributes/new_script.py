@@ -1,1 +1,0 @@
-print("Python goes further than Java")
