@@ -19,7 +19,7 @@ package br.com.rafael.privacity;
  * classes are defined or whatever child of their outer classes in the same package;
  * -> private: accessible only in their outer classes.
  */
-public class HowDoesItWork {
+public class Main {
     public static void main(String[] args) {
         System.out.println("Java and O.O languages have complex package mechanisms to organize a project");
     }

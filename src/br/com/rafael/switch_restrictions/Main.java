@@ -7,6 +7,7 @@ public class Main {
         System.out.println("Switch only works with the following data types:");
         System.out.println("char, byte, short, int, Character, Byte, Short, Integer, String or enum");
         System.out.println("### boolean, long, float, double, Boolean, Long, Float and Double are not allowed ###");
+        System.out.println("When used with strings the switch statement compares as with string.equals() method.");
         try (Scanner input = new Scanner(System.in)) {
             System.out.print("Give me an integer: ");
             int number = input.nextInt();

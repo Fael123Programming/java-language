@@ -15,6 +15,8 @@ public class Main {
         result += 8;
         result %= 7;
         print(result);
+        System.err.println("This is the standard output for error messages: it is colored red");
+        System.out.println("Standard output");
     }
 
     private static void print(int number) {
