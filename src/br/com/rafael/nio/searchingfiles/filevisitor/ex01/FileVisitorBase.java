@@ -1,4 +1,4 @@
-package br.com.rafael.nio.searchingfiles.filevisitor;
+package br.com.rafael.nio.searchingfiles.filevisitor.ex01;
 
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;

@@ -1,11 +1,9 @@
-package br.com.rafael.nio.searchingfiles.filevisitor;
+package br.com.rafael.nio.searchingfiles.filevisitor.ex01;
 
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileSearcher extends SimpleFileVisitor<Path> {
     private String termination;
@@ -31,12 +29,9 @@ public class FileSearcher extends SimpleFileVisitor<Path> {
 
     public void search() {
         try {
-            if (showAbsolutePath) {
-                FileVisitorAbsolute fileVisitorAbsolute = new FileVisitorAbsolute(termination);
-                Files.walkFileTree(origin, fileVisitorAbsolute);
-                filesSearched = fileVisitorAbsolute.filesSearched;
-            }
-
+            FileVisitorBase fileVisitor = showAbsolutePath ? new FileVisitorAbsolute(termination) : new FileVisitor(termination);
+            Files.walkFileTree(origin, fileVisitor);
+            filesSearched = fileVisitor.getFilesVisited();
         } catch(IOException ignore) {
             System.out.println("IOException has been thrown.");
             System.out.println("Check the path you entered to this object");
@@ -80,29 +75,5 @@ public class FileSearcher extends SimpleFileVisitor<Path> {
     private void checkTermination(String termination) {
         if (termination.isBlank())
             throw new IllegalArgumentException("Cannot receive the following termination: " + termination);
-    }
-
-
-    private static class FileVisitor extends SimpleFileVisitor<Path> implements FileVisitorBase {
-        private final String termination;
-        private int filesSearched;
-
-        public FileVisitor(String termination) {
-            this.termination = termination;
-        }
-
-        @Override
-        public FileVisitResult visitFile(Path path, BasicFileAttributes basicFileAttributes) {
-            if (path.getFileName().toString().endsWith(this.termination)) {
-                System.out.println(path.getFileName().getFileName());
-                filesSearched++;
-            }
-            return FileVisitResult.CONTINUE;
-        }
-
-        @Override
-        public int getFilesVisited() {
-            return filesSearched;
-        }
     }
 }
