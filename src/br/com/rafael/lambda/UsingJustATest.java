@@ -2,6 +2,8 @@ package br.com.rafael.lambda;
 
 public class UsingJustATest {
     public static void main(String[] args) {
+        System.out.println("If you want to pass a method into another method");
+        System.out.println("use lambda expressions or method reference");
         JustATest jat = (message, integer, floatNumber, logic) -> {
             //Functional interfaces can be "instantiated" using lambda expressions!
             System.out.println("Values provided:");
