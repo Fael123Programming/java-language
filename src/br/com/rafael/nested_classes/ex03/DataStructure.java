@@ -35,6 +35,7 @@ public class DataStructure {
     public int getSize() {
         return size;
     }
+
     /**
      * Interface inside a class to be implemented by an inner class.
      */
