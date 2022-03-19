@@ -3,8 +3,8 @@ package br.com.rafael.nested_classes.ex03;
 import java.util.Iterator;
 
 //Inner classes may be well-used when building iterators to data structures.
-//To handle user interface events, you must know how to use inner classes, because the event-handling mechanism makes
-//extensive use of them.
+//To handle user interface events, you must know how to use inner classes,
+// because the event-handling mechanism makes extensive use of them.
 
 public class DataStructure {
     private final int[] arrayOfIntegers;
