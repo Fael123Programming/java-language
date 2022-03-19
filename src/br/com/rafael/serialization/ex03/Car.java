@@ -69,7 +69,7 @@ public class Car implements Serializable {
     @Serial
     private void writeObject(ObjectOutputStream outputStream) {
         try {
-            outputStream.defaultWriteObject(); //Write all serializable objects normally.
+            outputStream.defaultWriteObject(); //Write all serializable object's data normally.
 //          Write engine's data manually...
             outputStream.writeUTF(engine.brand);
             outputStream.writeUTF(engine.model);
@@ -83,7 +83,7 @@ public class Car implements Serializable {
     @Serial
     private void readObject(ObjectInputStream inputStream) {
         try {
-            inputStream.defaultReadObject(); //Read all serializable objects normally.
+            inputStream.defaultReadObject(); //Read all serializable object's data normally.
 //          Read engine's data manually...
             engine = new Engine(inputStream.readUTF(), inputStream.readUTF(), inputStream.readInt());
 //          Pay twice more attention to the order you are writing the data and reading it.

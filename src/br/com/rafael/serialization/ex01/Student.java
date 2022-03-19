@@ -1,6 +1,7 @@
 package br.com.rafael.serialization.ex01;
 
 import java.io.Serializable;
+
 //This is a flag interface which is used to only say a meaning.
 //Nothing should be implemented.
 

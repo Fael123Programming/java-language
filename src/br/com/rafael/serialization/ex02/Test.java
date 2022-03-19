@@ -16,6 +16,6 @@ public class Test {
         AccountDeserializer deserializer = new AccountDeserializer();
         Account freshAccount = deserializer.deserialize();
         System.out.println(freshAccount);
-        System.out.println(freshAccount.getOwner().getAge());
+//        System.out.println(freshAccount.getOwner().getAge());
     }
 }

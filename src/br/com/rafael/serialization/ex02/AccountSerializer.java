@@ -8,7 +8,7 @@ import java.io.IOException;
 public class AccountSerializer {
     public void serialize(Account account) {
         Objects.requireNonNull(account, "account cannot be null");
-        final String PATH = "src/br/com/rafael/serialization/ex02/accounts.ser";
+        final String PATH = "src/br/com/rafael/serialization/ex02/account.ser";
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(PATH))) {
             outputStream.writeObject(account);
         } catch (IOException e) {
