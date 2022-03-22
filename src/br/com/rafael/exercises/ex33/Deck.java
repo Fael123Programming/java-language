@@ -9,22 +9,24 @@ public class Deck {
     }
 
     public Deck() {
+        int diamondsNumber = Card.Suit.DIAMONDS.getNumber(), aceNumber = Card.Rank.ACE.getNumber();
         for (int suit = 0; suit < SUITS; suit++)
             for (int rank = 0; rank < RANKS; rank++)
-                cards[suit][rank] = new Card(Card.DIAMONDS + suit, Card.ACE + rank);
-    }
+                cards[suit][rank] = new Card(diamondsNumber + suit, aceNumber + rank);
 
+    }
 
     public Card getCard(int suit, int rank) throws IllegalArgumentException {
         Card.checkIsValidSuit(suit);
         Card.checkIsValidRank(rank);
-        return cards[suit - Card.DIAMONDS][rank - Card.ACE];
+        return cards[suit - Card.Suit.DIAMONDS.getNumber()][rank - Card.Rank.ACE.getNumber()];
     }
 
     public String traverseDeck() {
         StringBuilder builder = new StringBuilder();
+        int diamondsNumber = Card.Suit.DIAMONDS.getNumber();
         for (int suit = 0; suit < SUITS; suit++) {
-            builder.append(Card.getSuitStringOf(Card.DIAMONDS + suit)).append(" -> ");
+            builder.append(Card.getSuitStringOf(diamondsNumber + suit)).append(" -> ");
             for (int rank = 0; rank < RANKS; rank++) {
                 builder.append(cards[suit][rank].getStrRank());
                 if (rank < RANKS - 1)

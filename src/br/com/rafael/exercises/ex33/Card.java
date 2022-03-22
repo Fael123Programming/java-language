@@ -4,28 +4,6 @@ public class Card {
     private final int rank;
     private final int suit;
 
-//  Kinds of ranks
-    public static final int ACE = 1;
-    public static final int DEUCE = 2;
-    public static final int THREE = 3;
-    public static final int FOUR = 4;
-    public static final int FIVE = 5;
-    public static final int SIX = 6;
-    public static final int SEVEN = 7;
-    public static final int EIGHT = 8;
-    public static final int NINE = 9;
-    public static final int TEN = 10;
-    public static final int JACK = 11;
-    public static final int QUEEN = 12;
-    public static final int KING = 13;
-
-//  Kinds of suits
-    public static final int DIAMONDS = 14;
-    public static final int CLUBS = 15;
-    public static final int HEARTS = 16;
-    public static final int SPADES = 17;
-
-
     public Card(int suit, int rank) throws IllegalArgumentException {
         checkIsValidSuit(suit);
         checkIsValidRank(rank);
@@ -51,45 +29,75 @@ public class Card {
 
     public static String getRankStringOf(int rank) {
         return switch(rank) {
-          case ACE -> "ACE";
-          case DEUCE -> "DEUCE";
-          case THREE -> "THREE";
-          case FOUR -> "FOUR";
-          case FIVE -> "FIVE";
-          case SIX -> "SIX";
-          case SEVEN -> "SEVEN";
-          case EIGHT -> "EIGHT";
-          case NINE -> "NINE";
-          case TEN -> "TEN";
-          case JACK -> "JACK";
-          case QUEEN -> "QUEEN";
-          case KING -> "KING";
+            case 1 -> "ACE";
+            case 2 -> "DEUCE";
+            case 3 -> "THREE";
+            case 4 -> "FOUR";
+            case 5 -> "FIVE";
+            case 6 -> "SIX";
+            case 7 -> "SEVEN";
+            case 8 -> "EIGHT";
+            case 9 -> "NINE";
+            case 10 -> "TEN";
+            case 11 -> "JACK";
+            case 12 -> "QUEEN";
+            case 13 -> "KING";
           default -> "unknown";
         };
     }
 
     public static String getSuitStringOf(int suit) {
         return switch(suit) {
-            case DIAMONDS -> "DIAMONDS";
-            case CLUBS -> "CLUBS";
-            case HEARTS -> "HEARTS";
-            case SPADES -> "SPADES";
+            case 14 -> "DIAMONDS";
+            case 15 -> "CLUBS";
+            case 16 -> "HEARTS";
+            case 17 -> "SPADES";
             default -> "unknown";
         };
     }
 
     public static void checkIsValidRank(int rank) throws IllegalArgumentException {
-        if (rank < ACE || rank > KING)
+        if (rank < 1 || rank > 13)
             throw new IllegalArgumentException("invalid rank: " + rank);
     }
 
     public static void checkIsValidSuit(int suit) throws IllegalArgumentException {
-        if (suit < DIAMONDS || suit > SPADES)
+        if (suit < 14 || suit > 17)
             throw new IllegalArgumentException("invalid suit: " + suit);
     }
 
     @Override
     public String toString() {
         return getStrRank() + " of " + getStrSuit();
+    }
+
+    public enum Rank {
+        ACE(1), DEUCE(2), THREE(3), FOUR(4), FIVE(5), SIX(6),
+        SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(11), QUEEN(12),
+        KING(13);
+
+        final int number;
+
+        Rank(int number) {
+            this.number = number;
+        }
+
+        public int getNumber() {
+            return number;
+        }
+    }
+
+    public enum Suit {
+        DIAMONDS(14), CLUBS(15), HEARTS(16), SPADES(17);
+
+        final int number;
+
+        Suit(int number) {
+            this.number = number;
+        }
+
+        public int getNumber() {
+            return number;
+        }
     }
 }

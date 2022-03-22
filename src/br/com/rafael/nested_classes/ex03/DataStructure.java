@@ -1,6 +1,7 @@
 package br.com.rafael.nested_classes.ex03;
 
 import java.util.Iterator;
+import java.util.function.Function;
 
 //Inner classes may be well-used when building iterators to data structures.
 //To handle user interface events, you must know how to use inner classes,
@@ -40,16 +41,39 @@ public class DataStructure {
             else
                 break;
         }
+        System.out.println();
+    }
+
+    public void print(Function<Integer, Boolean> func) {
+        for (int i = 0, aux; i < arrayOfIntegers.length; i++) {
+            if (!func.apply(i))
+                continue;
+            System.out.print(arrayOfIntegers[i]);
+            aux = i + 2;
+            if (aux < arrayOfIntegers.length)
+                if (func.apply(aux))
+                    System.out.print(", ");
+        }
+        System.out.println();
     }
 
     public int getSize() {
         return size;
     }
 
+    public static boolean isEvenIndex(int index) {
+        return index % 2 == 0;
+    }
+
+    public static boolean isOddIndex(int index) {
+        return index % 2 == 1;
+    }
+
     /**
      * Interface inside a class to be implemented by an inner class.
      */
-    interface DataStructureIterator extends Iterator<Integer> {}
+    interface DataStructureIterator extends Iterator<Integer> {
+    }
 
     /**
      * The base iterator interface of this data structure.

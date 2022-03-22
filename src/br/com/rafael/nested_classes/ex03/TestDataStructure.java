@@ -8,7 +8,7 @@ public class TestDataStructure {
         System.out.println(ds.getSize() + " elements");
         DataStructureIterator it = ds.evenIterator();
         ds.print(it);
-        System.out.println();
+        System.out.println("----------------------------");
         ds.print(new DataStructureIterator() {
             private int index;
 
@@ -31,6 +31,21 @@ public class TestDataStructure {
                 return next;
             }
         });
-        System.out.println();
+        System.out.println("----------------------------");
+        ds.print(i -> i % 2 == 0); //Even indexes!
+        System.out.println("----------------------------");
+        ds.print(i -> i % 2 == 1); //Odd indexes!
+//      These couple of lambda expressions receives an integer as argument, validates it
+//      and returns a boolean value as result.
+        System.out.println("----------------------------");
+        ds.print(DataStructure::isEvenIndex);
+        System.out.println("----------------------------");
+        ds.print(DataStructure::isOddIndex);
+//        Object obj = 100;
+//        System.out.println(obj);
+//        obj = true;
+//        System.out.println(obj);
+//        obj = "String";
+//        System.out.println(obj);
     }
 }
