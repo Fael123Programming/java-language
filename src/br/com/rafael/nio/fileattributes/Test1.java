@@ -49,7 +49,7 @@ public class Test1 {
             System.out.println("Exception block 3");
         }
         System.out.println("------------------------------------------------------------");
-        path = Paths.get("src/br/com/rafael/garbage_collector/Test.java");
+        path = Paths.get("src/br/com/rafael/garbage_collector/TransferenceDoer.java");
         System.out.println("Showing information about a file through Files class");
         System.out.println("Is it readable? " + Files.isReadable(path));
         System.out.println("Is it writable? " + Files.isWritable(path));

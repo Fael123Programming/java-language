@@ -1,5 +1,8 @@
 package br.com.rafael.nested_classes.ex01;
 
+//Use a non-static nested class (or inner class) if you require access to an enclosing instance's non-public fields and
+//methods. Use a static nested class if you don't require this access.
+
 public class OuterClass {
 //        As a member of the OuterClass, a nested class can be declared private, public,
 //        protected, or package private.

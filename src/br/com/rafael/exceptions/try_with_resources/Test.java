@@ -13,7 +13,7 @@ public class Test {
     private static void openFileJava6() {
         Reader fileReader = null;
         try {
-            fileReader = new BufferedReader(new FileReader("Test.java"));
+            fileReader = new BufferedReader(new FileReader("TransferenceDoer.java"));
         } catch (FileNotFoundException fnfe) {
             System.out.println("File not found!");
         } finally {
@@ -33,7 +33,7 @@ public class Test {
 //        Java will have the responsibility of closing our resource.
 //        You can create more resources separating them through semi-colons.
 //        You are not obliged of adding a catch or finally statement.
-        try (Reader fileReader = new BufferedReader(new FileReader("Test.java"))) {
+        try (Reader fileReader = new BufferedReader(new FileReader("TransferenceDoer.java"))) {
 
         } catch (IOException ioe) {
 

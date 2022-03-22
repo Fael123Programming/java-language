@@ -7,7 +7,7 @@ import java.util.Iterator;
 // because the event-handling mechanism makes extensive use of them.
 
 public class DataStructure {
-    private final int[] arrayOfIntegers;
+    protected final int[] arrayOfIntegers;
     private final int size;
 
     public DataStructure(int... integers) {
@@ -30,6 +30,16 @@ public class DataStructure {
 
     public DataStructureIterator oddIterator() {
         return new OddIterator();
+    }
+
+    public void print(DataStructureIterator it) {
+        while (true) {
+            System.out.print(it.next());
+            if (it.hasNext())
+                System.out.print(", ");
+            else
+                break;
+        }
     }
 
     public int getSize() {
@@ -58,12 +68,12 @@ public class DataStructure {
 
         @Override
         public Integer next() {
+            Integer next = null;
             if (hasNext()) {
-                Integer toReturn = DataStructure.this.arrayOfIntegers[index];
+                next = DataStructure.this.arrayOfIntegers[index];
                 index += 2;
-                return toReturn;
             }
-            return null;
+            return next;
         }
     }
 
