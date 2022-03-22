@@ -1,4 +1,4 @@
-package br.com.rafael.enumeration_3.ex01;
+package br.com.rafael.enumeration_3;
 
 public enum Planet {
     MERCURY (3.303e+23, 2.4397e6),

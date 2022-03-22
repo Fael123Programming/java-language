@@ -1,4 +1,4 @@
-package br.com.rafael.collections_framework.equalsmethod;
+package br.com.rafael.collections_framework.equalsandhashcode;
 
 
 public class EqualsTest {
@@ -9,7 +9,7 @@ public class EqualsTest {
         String name1 = "Michael"; //Stored in the pool of Strings.
         String name2 = new String("Michael"); //Stored in the JVM heap.
         System.out.println(name1 == name2); //False! Each one is located in a different place.
-//    The same applies to the other wrapper classes.
+//    The same applies to the other wrapper classes such as Integer, Double and so on.
         System.out.println(name1.equals(name2));
         System.out.println("-------------------------------------------");
         Phone p1 = new Phone("Samsung A70", "XYIJK90123");

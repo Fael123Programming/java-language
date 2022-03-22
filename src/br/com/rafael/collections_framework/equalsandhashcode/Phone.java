@@ -1,4 +1,6 @@
-package br.com.rafael.collections_framework.equalsmethod;
+package br.com.rafael.collections_framework.equalsandhashcode;
+
+import java.util.Objects;
 
 public class Phone {
     private final String name, IMEI;
@@ -24,7 +26,7 @@ public class Phone {
      * <li>Symmetric: x.equals(y) == true, then y.equals(x) == true;</li>
      * <li>Transitive: x.equals(y) == true, y.equals(x) == true, x.equals(z) == true, then y.equals(x) == true;</li>
      * <li>Consistent: the method must return the same boolean value always, considering that the objects
-     * being compared with did not change.</li>
+     * being compared did not change.</li>
      * </ul>
      * @param anotherObject the object to compare with
      * @return true if this object and anotherObject are equal. false instead.
@@ -36,5 +38,18 @@ public class Phone {
         if (this == casted) //x.equals(x) case. It must be reflexive!
             return true;
         return IMEI != null && IMEI.equals(casted.IMEI);
+    }
+
+    @Override
+    public int hashCode() {
+//      Generates a hash code for any object of this class.
+//      "native" stands for a piece of code that its implementation
+//      is made depending on the operating system.
+//      One obligation is that:
+//        -> Let x and y be two objects, if x.equals(y) then x.hashCode() must
+//        be equal to y.hashCode().
+//      The opposite shouldn't be necessarily true.
+//      If x.hashCode() != y.hashCode() then x.equals(y) must be false.
+        return IMEI == null ? -1 : Objects.hash(IMEI); //or IMEI.hashCode();
     }
 }
