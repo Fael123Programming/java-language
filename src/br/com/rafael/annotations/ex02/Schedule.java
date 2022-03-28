@@ -15,7 +15,7 @@ public @interface Schedule {
 
     @Documented
     @Target(ElementType.METHOD)
-    @interface Schedules {
+    @interface Schedules { //Container annotation type.
         Schedule[] value();
     }
 }

@@ -6,5 +6,8 @@ public class Main {
         h.open();
         h.openBackDoor();
         h.openFrontDoor();
+        House house = new House();
+        house.open();
+        house.openFrontDoor();
     }
 }

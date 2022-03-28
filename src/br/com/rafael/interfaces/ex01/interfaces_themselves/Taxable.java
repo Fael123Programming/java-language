@@ -31,5 +31,6 @@ public interface Taxable {
 
     static void anotherDoNothing() {
         //Pretty what you just read on this method signature...
+//        Static methods in an interface are more utility methods!
     }
 }
