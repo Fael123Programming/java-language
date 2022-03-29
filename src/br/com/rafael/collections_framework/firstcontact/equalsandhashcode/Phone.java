@@ -53,4 +53,9 @@ public class Phone {
 //      If x.hashCode() != y.hashCode() then x.equals(y) must be false.
         return IMEI == null ? -1 : Objects.hash(IMEI); //or IMEI.hashCode();
     }
+
+    @Override
+    public String toString() {
+        return name + " (" + IMEI + ")";
+    }
 }

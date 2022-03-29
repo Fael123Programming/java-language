@@ -30,13 +30,16 @@ public class ListTest {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(100); //100 is boxed into an integer object.
         numbers.add(900);
+        numbers.add(500);
+        numbers.add(5);
+        numbers.add(34);
         numbers.forEach(n -> System.out.println(n + " " + n.getClass().getName()));
         System.out.println(numbers.remove(Integer.valueOf(100))); //equals() will be used though.
         System.out.println("Size: " + numbers.size());
 
         List<Integer> ages = List.of(90, 10, 30);
+        numbers.clear();
         numbers.addAll(ages); //Adds a whole new collection into another one.
-
         numbers.forEach(System.out::println);
     }
 }
