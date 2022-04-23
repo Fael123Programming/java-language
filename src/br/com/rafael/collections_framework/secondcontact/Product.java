@@ -1,5 +1,6 @@
-package br.com.rafael.collections_framework.secondcontact.lists;
+package br.com.rafael.collections_framework.secondcontact;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Product implements Comparable<Product> {
@@ -62,5 +63,20 @@ public class Product implements Comparable<Product> {
 //       this == p ? return zero!
 //       this < p ? return a negative value!
         return name.compareTo(p.name); //Strings already have a compareTo() method!
+    }
+
+    public static class ProductIdComparator implements Comparator<Product> {
+        @Override
+        public int compare(Product p1, Product p2) {
+            return Long.compare(p1.getId(), p2.getId());
+        }
+    }
+
+    public static class ProductPriceComparator implements Comparator<Product> {
+        @Override
+        public int compare(Product p1, Product p2) {
+            return Double.compare(p1.getPrice(), p2.getPrice());
+            //Multiply by -1 to get it reversed.
+        }
     }
 }

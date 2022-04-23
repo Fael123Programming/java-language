@@ -1,4 +1,4 @@
-package br.com.rafael.collections_framework.secondcontact.lists;
+package br.com.rafael.collections_framework.secondcontact;
 
 import br.com.rafael.collections_framework.firstcontact.equalsandhashcode.Phone;
 
