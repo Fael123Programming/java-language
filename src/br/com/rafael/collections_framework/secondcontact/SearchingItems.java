@@ -20,7 +20,7 @@ public class SearchingItems {
         System.out.println("Hearthstone is at position " + Collections.binarySearch(games, new Game("Hearthstone")));
         Game toSearchFor = new Game("Super Mario Bros");
         System.out.println(Collections.binarySearch(games, toSearchFor));
-        //When not found, Collections.binarySearch() returns: (- (insertion point) - 1).
+        //If not found, Collections.binarySearch() returns: (- (insertion point) - 1).
         Comparator<Game> comparator = new Game.GameNameDescendingComparator();
         games.sort(comparator);
         for (Game g : games) {
