@@ -1,5 +1,6 @@
 package br.com.rafael.exercises.ex33;
 
+import java.util.Objects;
 public class Card {
     private final int rank;
     private final int suit;
@@ -69,6 +70,19 @@ public class Card {
     @Override
     public String toString() {
         return getStrRank() + " of " + getStrSuit();
+    }
+
+    @Override
+    public boolean equals(Object anotherObject) {
+        if (!(anotherObject instanceof Card anotherObjectCasted)) {
+            return false;
+        }
+        return suit == anotherObjectCasted.suit && rank == anotherObjectCasted.rank;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(suit, rank); //'(suit - 1) * 13 + rank' would work properly as well.
     }
 
     public enum Rank {
